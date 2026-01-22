@@ -1,16 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>CHEN Xintong | Personal Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS START ===== -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        nav {
+            margin-top: 1.5rem;
+        }
+
+        nav button {
+            margin: 0.3rem;
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 6px;
+            background-color: white;
+            color: #1e3a8a;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            background-color: #dbeafe;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #1e3a8a;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
+
+        ul {
+            line-height: 1.8;
+            padding-left: 1.2rem;
+        }
+
+        .highlight {
+            background-color: #fef3c7;
+            border-left: 6px solid #f59e0b;
+        }
+
+        .action-btn {
+            margin-top: 1rem;
+            padding: 0.7rem 1.4rem;
+            border: none;
+            border-radius: 6px;
+            background-color: #1e3a8a;
+            color: white;
+            cursor: pointer;
+        }
+
+        .action-btn:hover {
+            background-color: #374fc7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #e5e7eb;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        a {
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <!-- ===== CSS END ===== -->
 </head>
+
 <body>
 
 <header>
     <h1>CHEN Xintong</h1>
-    <p>Government & International Affairs | Data Science Minor</p>
+    <p>Government & International Affairs · Data Science Minor</p>
+
     <nav>
         <button onclick="scrollToSection('about')">About</button>
         <button onclick="scrollToSection('education')">Education</button>
@@ -19,22 +123,23 @@
     </nav>
 </header>
 
-<section id="about" class="card">
+<section id="about">
     <h2>About Me</h2>
     <p>
-        I am a Year 1 student at Lingnan University majoring in
-        Government and International Affairs, with a minor in Data Science.
-        I am passionate about social issues, public policy, and interdisciplinary learning.
+        I am a Year 1 student at Lingnan University majoring in Government and
+        International Affairs, with a minor in Data Science. I am interested in
+        social issues, public policy, and interdisciplinary learning that combines
+        humanities and technology.
     </p>
 </section>
 
-<section id="education" class="card">
+<section id="education">
     <h2>Education</h2>
 
     <h3>Lingnan University (2025 – Present)</h3>
     <ul>
         <li>Major: Government & International Affairs</li>
-        <li>Minor: Data Science</li>
+        <li>Minor: Data Science (expected Aug 2026)</li>
         <li>GPA: 3.40</li>
     </ul>
 
@@ -42,20 +147,20 @@
     <p>Second Semester of Grade 9 – Grade 12</p>
 
     <h3>Standardized Test</h3>
-    <p>IELTS: 6.5 (Oct 22, 2024)</p>
+    <p>IELTS: 6.5 (October 22, 2024)</p>
 </section>
 
-<section id="activities" class="card">
+<section id="activities">
     <h2>Activities & Experience</h2>
 
     <ul>
         <li>
             <strong>Peer Mentors Programme</strong> (Aug 2025 – Present)<br>
-            Supporting new students and enhancing social integration.
+            Helping new students integrate into university life and expand social connections.
         </li>
         <li>
             <strong>Lingnan C. Connect Programme</strong> (Sept 2025 – Present)<br>
-            Learning about social issues and community responsibility.
+            Learning about social issues and assuming social responsibility.
         </li>
         <li>
             <strong>CantoNet Community</strong> (Sept – Oct 2025)<br>
@@ -63,23 +168,39 @@
         </li>
         <li>
             <strong>Hubei Chisheng Law Firm</strong> (Jul – Aug 2024)<br>
-            Learned court procedures and basic litigation skills.
+            Practiced client communication and learned basic litigation and court procedures.
         </li>
     </ul>
 
-    <button onclick="toggleHighlight()">Highlight Activities</button>
+    <button class="action-btn" onclick="toggleHighlight()">
+        Highlight This Section
+    </button>
 </section>
 
-<section id="contact" class="card">
+<section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:xintongchen2@ln.hk">xintongchen2@ln.hk</a></p>
-    <p>Phone: +852 5647 2554</p>
+    <p>Phone: +852 5647 2554 / +86 19907164098</p>
 </section>
 
 <footer>
-    <p>© 2026 CHEN Xintong</p>
+    © 2026 CHEN Xintong · Personal Website
 </footer>
 
-<script src="script.js"></script>
+<!-- ===== JavaScript START ===== -->
+<script>
+    function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+
+    function toggleHighlight() {
+        const section = document.getElementById("activities");
+        section.classList.toggle("highlight");
+    }
+</script>
+<!-- ===== JavaScript END ===== -->
+
 </body>
 </html>
